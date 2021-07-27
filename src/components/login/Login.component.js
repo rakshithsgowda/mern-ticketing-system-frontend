@@ -1,13 +1,14 @@
 import { Col, Container, Form, Row, Button } from 'react-bootstrap'
 import { PropTypes } from 'prop-types'
-const LoginForm = ({ handleOnChange, email, pass }) => {
+
+const LoginForm = ({ handleOnChange, handleOnSubmit, email, pass }) => {
   return (
     <Container>
       <Row>
         <Col>
           <h1 className='text-danger text-center'>Client Login</h1>
           <hr />
-          <Form>
+          <Form autoComplete='off' onSubmit={handleOnSubmit}>
             <Form.Group>
               <Form.Label>Email Address</Form.Label>
               <Form.Control
@@ -16,7 +17,7 @@ const LoginForm = ({ handleOnChange, email, pass }) => {
                 onChange={handleOnChange}
                 value={email}
                 placeholder='Enter Email'
-                required
+                // required
               />
             </Form.Group>
             <Form.Group>
@@ -27,7 +28,7 @@ const LoginForm = ({ handleOnChange, email, pass }) => {
                 onChange={handleOnChange}
                 value={pass}
                 placeholder='Enter password'
-                required
+                // required
               />
             </Form.Group>
             <Button className='mt-3' type='submit'>
@@ -47,6 +48,7 @@ const LoginForm = ({ handleOnChange, email, pass }) => {
 }
 
 LoginForm.propTypes = {
+  handleOnSubmit: PropTypes.func.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   pass: PropTypes.string.isRequired,

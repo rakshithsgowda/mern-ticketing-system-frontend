@@ -20,14 +20,23 @@ const Entry = () => {
       default:
         break
     }
+  }
 
-    console.log(name, value)
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+    if (!email || !password) {
+      return alert('Fill up all the form elements!')
+    }
+
+    // TODO call api to submit the form
+    console.log(email, password)
   }
 
   return (
     <div className='entry-page bg-info'>
       <section className='jumbotron form-box p-5 bg-light'>
         <LoginForm
+          handleOnSubmit={handleOnSubmit}
           handleOnChange={handleOnChange}
           email={email}
           pass={password}
