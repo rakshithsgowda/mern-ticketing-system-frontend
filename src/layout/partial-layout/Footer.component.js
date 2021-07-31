@@ -1,6 +1,5 @@
-const year = new Date().getFullYear()
-
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <div className='text-center copy-end'>
       &copy; TICKETS-CRM all rights reserved - {year}
