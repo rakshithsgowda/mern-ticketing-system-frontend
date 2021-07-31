@@ -2,10 +2,16 @@ import { Col, Container, Row, Button } from 'react-bootstrap'
 import TicketTable from '../../components/ticket-table/TicketTable.component'
 
 import tickets from '../../assets/data/dummy-ticket.json'
+import PageBreadcrumb from '../../components/breadcrumb/Breadcrumb.component'
 
 const Dashboard = () => {
   return (
     <Container>
+      <Row>
+        <Col>
+          <PageBreadcrumb page='Dashboard' />
+        </Col>
+      </Row>
       <Row>
         <Col className='text-center mt-5 mb-2'>
           <Button
