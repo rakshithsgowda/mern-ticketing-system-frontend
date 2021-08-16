@@ -3,7 +3,24 @@
     "id": 1,
     "subject": "Issue with ssl certificate",
     "status": "client response pending",
-    "addedAt": "20-09-23"
+    "addedAt": "20-09-23",
+    "history": [
+      {
+        "date": "20-10-10",
+        "message": "sdsffe",
+        "messageBy": "client"
+      },
+      {
+        "date": "20-10-10",
+        "message": "sdssssfceffe",
+        "messageBy": "operator"
+      },
+      {
+        "date": "20-10-10",
+        "message": "sdcdscsffe",
+        "messageBy": "client"
+      }
+    ]
   },
   {
     "id": 2,

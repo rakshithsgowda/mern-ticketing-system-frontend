@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Button } from 'react-bootstrap'
 import PageBreadcrumb from '../../components/breadcrumb/Breadcrumb.component'
 import SearchForm from '../../components/search-form/SearchForm.component'
 import TicketTable from '../../components/ticket-table/TicketTable.component'
@@ -34,7 +34,7 @@ const TicketLists = () => {
       </Row>
       <Row className='mt-4 mb-4 p-4'>
         <Col>
-          <button className='btn btn-info'>Add New Ticket</button>
+          <Button variant='info'>Add New Ticket</Button>
         </Col>
         <Col className='text-end'>
           <SearchForm handleOnChange={handleOnChange} str={str} />
