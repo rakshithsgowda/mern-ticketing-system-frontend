@@ -2,7 +2,7 @@ import './messageHistory.style.css'
 
 import PropTypes from 'prop-types'
 const MessageHistory = ({ message }) => {
-  console.log(message)
+  // console.log(message)
   if (!message) return null
   return message.map((row, i) => (
     <div key={i} className='message-history mt-3'>
